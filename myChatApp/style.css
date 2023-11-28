@@ -1,0 +1,73 @@
+body {
+  box-sizing: border-box;
+  margin: 0 300px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: blanchedalmond;
+}
+
+h1 {
+  justify-content: center;
+  text-align: center;
+  font-size: 45px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(115, 35, 35);
+  text-align: right;
+  font-size: 18px;
+}
+
+.messages {
+  border: 2px solid #6e6c6c;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.messages {
+  flex-shrink: 1;
+  overflow: auto;
+}
+
+.message {
+  padding: 5px 0;
+  justify-content: flex-end;
+  border-radius: 15px;
+  margin: 8px;
+  max-width: max-content;
+  background-color: rgb(236, 236, 242);
+}
+
+.message .member {
+  display: inline-block;
+}
+
+.member {
+  padding-right: 10px;
+  position: relative;
+}
+
+.message-form {
+  display: flex;
+  flex-shrink: 0;
+}
+.message-form__input {
+  flex-grow: 1;
+  border: 1px solid #dfdfdf;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.message-form__button {
+  margin: 10px;
+  background-color: rgb(234, 130, 130);
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  border-radius: 5px;
+}

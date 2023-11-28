@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      type="text/javascript"
+      src="https://cdn.scaledrone.com/scaledrone.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Ana's chat app</title>
+  </head>
+  <body>
+    <h1>Welcome to Ana's chat!</h1>
+    <div class="messages">
+      <div class="message"></div>
+    </div>
+    <form class="message-form" onsubmit="return false;">
+      <input
+        class="message-form__input"
+        placeholder="Type a message..."
+        type="text"
+      />
+      <input class="message-form__button" value="Send" type="submit" />
+    </form>
+    <footer>
+      <span id="datetime"></span>
+      <script>
+        function updateDateTime() {
+          const now = new Date();
+          const currentDateTime = now.toLocaleString();
+          document.querySelector("#datetime").textContent = currentDateTime;
+        }
+        setInterval(updateDateTime, 1000);
+      </script>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
